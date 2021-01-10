@@ -20,7 +20,7 @@ before_install:
   - docker build -t htthecool/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true htthecool/react-test npm
+  - docker run -e CI=true htthecool/react-test npm test
 
 deploy:
   provider: script
